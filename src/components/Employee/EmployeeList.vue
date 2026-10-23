@@ -5,7 +5,7 @@ import Button from 'primevue/button';
 import Tag from 'primevue/tag';
 import InputText from 'primevue/inputtext';
 import { FilterMatchMode } from '@primevue/core/api';
-import type { Employee } from '../types/employee';
+import type { Employee } from '../../types/employee';
 import { ref } from 'vue';
 
 

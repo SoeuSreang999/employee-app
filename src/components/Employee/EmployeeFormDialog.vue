@@ -10,8 +10,8 @@ import DatePicker from 'primevue/datepicker';
 import InputNumber from 'primevue/inputnumber';
 import InputMask from 'primevue/inputmask';
 import Button from 'primevue/button';
-import type { Employee } from '../types/employee';
-import { locationData } from '../data/locations';
+import type { Employee } from '../../types/employee';
+import { locationData } from '../../data/locations';
 
 const visible = defineModel<boolean>('visible');
 const props   = defineProps<{

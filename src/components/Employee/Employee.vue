@@ -1,49 +1,15 @@
 <script setup lang="ts">
 import { ref } from 'vue';
+import { useConfirm } from 'primevue/useconfirm';
+import { initialEmployees } from '@/data/employees';
+import type { Employee } from '@/types/employee';
 import Button from 'primevue/button';
 import ConfirmDialog from 'primevue/confirmdialog';
-import { useConfirm } from 'primevue/useconfirm';
-
 import EmployeeList from './EmployeeList.vue';
 import EmployeeFormDialog from './EmployeeFormDialog.vue';
-import type { Employee } from '../types/employee.ts';
 
-const confirm   = useConfirm();
-const employees = ref<Employee[]>([
-  {
-    id: 1,
-    name: 'John Smith',
-    gender: 'Male',
-    dob: new Date('1996-05-15'),
-    pob: 'Phnom Penh',
-    position: 'Developer',
-    salary: 1200,
-    phone: '012345678',
-    email: 'john@example.com',
-    province: 'Phnom Penh',
-    district: 'Daun Penh',
-    commune: 'BKK',
-    village: 'village_1',
-    fullAddress: 'village_1, BKK, Daun Penh, Phnom Penh'
-  },
-  {
-    id: 2,
-    name: 'Sokha Chan',
-    gender: 'Female',
-    dob: new Date('1998-08-20'),
-    pob: 'Kandal',
-    position: 'Accountant',
-    salary: 1000,
-    phone: '098765432',
-    email: 'sokha@example.com',
-    province: 'Phnom Penh',
-    district: 'Toul Kork',
-    commune: 'Tonle Bassac',
-    village: 'village_2',
-    fullAddress: 'village_2, Tonle Bassac, Toul Kork, Phnom Penh'
-  }
-]);
-
+const confirm         = useConfirm();
+const employees       = ref<Employee[]>([...initialEmployees]);
 const isDialogVisible = ref(false);
 const isEditing       = ref(false);
 const currentEmployee = ref<Employee | null>(null);
