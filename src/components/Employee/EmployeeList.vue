@@ -70,7 +70,7 @@ const fillterData = ref({
       <Column field="email" header="Email"></Column>
       <Column field="position" header="Position">
         <template #body="{ data }">
-          <Tag :value="data.position" severity="info" />
+          <Tag :value="data.position" severity="info" class="!rounded-lg !py-0 !px-2" />
         </template>
       </Column>
       <Column field="salary" header="Salary">
