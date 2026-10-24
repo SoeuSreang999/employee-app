@@ -74,3 +74,11 @@ textarea {
     font-size: 14px !important;
   }
 }
+
+/* លាក់ផ្ទាំង Invalid PrimeUI License ទាំងស្រុង */
+[class*="license"],
+[class*="p-license"],
+.p-license-banner,
+div:has(> [class*="license"]) {
+  display: none !important;
+}
